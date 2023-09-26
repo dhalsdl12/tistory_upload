@@ -30,11 +30,20 @@ def driver_init(url, userId=None, password=None):
         # EC.element_to_be_clickable((By.XPATH, '//*[@id="password--2"]'))
         pw.send_keys(Keys.RETURN)
         # EC.element_to_be_clickable((By.XPATH, '//*[@id="mainContent"]/div/div/form/div[4]/button[1]'))
-
+        sleep(10)
+        driver.find_element(By.XPATH, '//*[@id="mArticle"]/div/div[2]/form/button').click()
+        sleep(1)
+        driver.get('https://dhalsdl12.tistory.com/')
+        sleep(1)
+        driver.find_element(By.XPATH, '//*[@id="menubar_wrapper"]/button').click()
+        sleep(1)
+        driver.find_element(By.XPATH, '//*[@id="menubar_wrapper"]/div/div/div[2]/div/div/a[2]').click()
+        sleep(1)
         sleep(10)
         
-        
+    
     except:
+        print('check')
         print_exc()
         return None
 
